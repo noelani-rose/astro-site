@@ -1,8 +1,10 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import background from '../images/background.jpg'
-import kdtraining from '../images/kdtraining.jpg'
+import kdtraining from '../images/kdtraining.jpg';
+import movies from '../images/movies.jpeg';
 import Card from '../components/Card.astro';
+
 
 
 
@@ -13,19 +15,29 @@ import Card from '../components/Card.astro';
 	<main>
 
 		<div class="content">
-			<h1 class = "name text-gradient">Noelani West</h1>
+
+            <a href = "/">Homepage</a>
+
+			<h1 class = "name text-gradient">Noelani West</h1>                        
+
             <h2>Here are some of my recent projects!</h2>
 
  
                 <div class = "project-1">
                     <div class="project-1-description">
-                        <h3>Knuckles down</h3><br/>
-                            <p>A mobile app that provides olympic weightlifters<br/> 
-                            with a variety of training programs based on their goals <br/> 
-                            and a means totrack their progress throughout the program.</p>
+                        <h3>Knuckles Down</h3><br/>
+                            <p>KD Training is an app that provides a wide variety of olympic weightlifting training programs and a means to track progress. The user will create a profile and depending on the user’s experience level in olympic weightlifting, will have access to respective training programs. There will be multiple programs to choose from, all with descriptions of the program, so that the user can choose which program fits their goals best. After a program is selected, the user can access that program at any time via their dashboard. The program is broken up into weeks and days. The user will be able to check off each exercise they do for the day and mark that day or week as complete. Journal entries can be made every day to leave notes about that day’s training and can be referred back to at any time via their dashboard. 
+                        </p>
                             
-                
-                        <a href = "https://github.com/noelani-rose/knuckles-down-solo-project">Checkout my github</a>
+                        <Card 
+                        href="https://github.com/noelani-rose/knuckles-down-solo-project"
+                        title="Github"/>
+                        <Card 
+                        href="https://docs.google.com/document/d/1iO3UvH8ZvZgUiN_MivmvYNMyVEooW723EqOYleAU0i4/edit?usp=sharing"
+                        title="Scope Document"/>
+                        <Card 
+                        href="https://docs.google.com/document/d/1iO3UvH8ZvZgUiN_MivmvYNMyVEooW723EqOYleAU0i4/edit?usp=sharing"
+                        title="Try It Out"/>
                     </div>
 
                     <div class="project-pic">
@@ -36,16 +48,20 @@ import Card from '../components/Card.astro';
                 <div class="project-2">
                     <div class="project-2-description">
                         <h3>Movie List</h3><br/>
-                            <p>A mobile app that provides olympic weightlifters<br/> 
-                            with a variety of training programs based on their goals <br/> 
-                            and a means totrack their progress throughout the program.</p>
-                            
-                
-                        <a href = "https://github.com/noelani-rose/knuckles-down-solo-project">Checkout my github</a>
+                            <p>This application allows a user to choose a movie from the provided 
+                                movie list and view the details of that movie including 
+                                the title, description, poster, and genres. Movie 
+                                information is being grabbed from respective databases. 
+                                User can navigate back to the movie list page.
+                                when 'back to movie list' button is clicked. 
+                            </p>
+                            <Card 
+                            href="https://github.com/noelani-rose/weekend-movie-sagas"
+                            title="Github"/>                
                     </div>
 
                     <div class="project-pic">
-                        <img src = {kdtraining} class = "kd-training"/>
+                        <!-- <img src = {movies} class = "movies-list"/> -->
                     </div>
                 </div>
 
@@ -53,22 +69,25 @@ import Card from '../components/Card.astro';
                 <div class="project-3">
                     <div class="project-3-description">
                         <h3>Reflection Form</h3><br/>
-                            <p>A mobile app that provides olympic weightlifters<br/> 
-                            with a variety of training programs based on their goals <br/> 
-                            and a means totrack their progress throughout the program.</p>
-                            
-                
-                        <a href = "https://github.com/noelani-rose/knuckles-down-solo-project">Checkout my github</a>
+                            <p>This app allows a use to rate on a scale from 1 to 5 how they're 
+                                feeling, how well they're understanding the content, how well they feel 
+                                supported, then leave any additional comments if they'd like. Each user 
+                                input is gathered from a seperate page and user is sent to next page when 
+                                the inputs have been filled and "next" button clicked. When all inputs are 
+                                taken, a new page will show the client a review of their feedback. When the 
+                                client submits, feedback is sent back to the server and stored in a 
+                                database. The user can then navigate back to the homepage to fill out another 
+                                feedback form.
+                            </p>
+                            <Card 
+                            href="https://github.com/noelani-rose/noelani-weekend-redux-feedback-loop"
+                            title="Github"/>                
                     </div>
 
                     <div class="project-pic">
-                        <img src = {kdtraining} class = "kd-training"/>
+                        <!-- <img src = {kdtraining} class = "kd-training"/> -->
                     </div>
                 </div>
-
-
-                
-        
             <br/>
  
 
@@ -88,7 +107,7 @@ import Card from '../components/Card.astro';
     border-radius: 10px;
     position: absolute;
     z-index: 1;
-    background-color: rgb(251, 251, 251);
+    background-color: rgba(244, 243, 243, 0.949);
     align-items: center;
     border-radius: 1px solid black;
     width: 80%;
@@ -99,20 +118,47 @@ import Card from '../components/Card.astro';
     padding: 20px;
 	}
 
+    .content a {
+        text-align: left;
+        font-size: 22px;
+        font-weight: bolder;
+		text-decoration: none;
+		line-height: 1;
+		padding: 1rem 1.3rem;
+		border-radius: 0.35rem;
+		opacity: 0.8;
+		background-size: 400%;
+        background-position: 0;
+		background-position: 100%;
+    }
+
+
+
     .project-1, .project-3{
         display: flex;
-    /* margin-right: 340px; */
-    gap: 50px;
-    /* flex-direction: column; */
-    /* align-items: flex-end; */
+        gap: 50px;
     }
 
     .project-2 {
         display: flex;
         flex-direction: row-reverse;
         gap: 50px;
+        margin-bottom: 60px;
     }
 
+    .project-1-description {
+        width: 480px;
+    }
+   .project-2-description {
+        margin-left: 400px;
+        width: 480px;
+
+    }
+
+    .project-3-description {
+        margin-right: 400px;
+        width: 480px;
+    }
 
 	h2 {
         margin-bottom: 40px
@@ -125,6 +171,11 @@ import Card from '../components/Card.astro';
         margin-bottom: 100px;
         flex-basis: 40%;
     }
+
+    .movies-list{
+        width: 300px;
+    }
+
 	.background-pic {
 		position: relative;
 		-webkit-background-size: cover;

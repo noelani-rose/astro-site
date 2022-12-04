@@ -1,72 +1,218 @@
 ---
-import Layout from "../layouts/Layout.astro"
-import background from "../images/background.jpeg"
+import Layout from '../layouts/Layout.astro';
+import background from '../images/background.jpg'
+import kdtraining from '../images/kdtraining.jpg';
+import group from '../images/group.jpg'
+import Card from '../components/Card.astro';
+import edan from '../images/edan.jpg'
+import screenshot1 from '../images/screenshot1.jpg'
+import screenshot2 from '../images/screenshot2.jpg'
+
+
+
 
 ---
 
+
 <Layout title="Noelani's Portfolio">
-    <h1><span>Noelani West</span></h1>
 	<main>
-	
-        <div class="blog-container">
 
-            <div class="blog-post-1">
-                <p id = "blog-title">Solo project done and presented!</p>
-            </div>
+		<div class="content">
 
-            <div class="blog-post-2">
-                <p id = "blog-title">Starting scoping my first solo project...</p>
-                <p>Seems easy for now but i expect it to get really difficult</p>
-            </div>
+            <a href = "/"><span>&larr;</span> Homepage</a>
 
-        </div>
+			<h1 class = "name text-gradient">Noelani West</h1>                        
+
+            <h2>A day in the life of a Prime student</h2>
+                <div class = "project-1">
+                    <div class="project-1-description">
+                        <h3>Shopping Cart Group Project Using React</h3><br/>
+						<h4>Oct/21/2022</h4>
+                            <p>This is a Prime Academy group project. Four fullstack engineering students 
+								created a shopping list web application.
+
+								This web application is able to input new items into 
+								the existing database, with their corresponding quantity and units. 
+								The web application also had the features to mark items as purchased, 
+								remove individual items from the list, and clear the entire items in the list.
+								
+								The group of students worked on pair coding and organizing 
+								of equal work. Students also worked together remotely to plan 
+								and review several pull requests. Lastly, the students focused 
+								on AXIOS methodology using GET, PUT, POST, and DELETE requests to 
+								communicate between the server and client.
+                        </p>
+                            
+                        <Card 
+                        href="https://github.com/noelani-rose/group-fs-react-shopping-list-pod2"
+                        title="Github"/>
+                    </div>
+
+                    <div class="project-pic">
+                        <img src = {group} class = "kd-training"/>
+                    </div>
+                </div>
+
+                <div class="project-2">
+					
+                    <div class="project-2-description">
+                        <h3>He's at it again...</h3><br/>
+						<h4>Oct/22/2022</h4>
+                            <p>
+								Sometimes he just gets in a mood, ya know
+                            </p>
+                            <Card 
+                            href="https://github.com/noelani-rose/weekend-movie-sagas"
+                            title="Full Vid"/>                
+                    </div>
+                    <div class="project-pic">
+                        <img src = {edan} class = "kd-training"/>
+                    </div>
+                </div>
+
+
+                <div class="project-3">
+                    <div class="project-3-description">
+                        <h3>Introduction to ReactJs</h3><br/>
+                            <p>
+                                We've started working with React, so have been doing a lot of work
+                                with components and code organization. I never knew organizing code 
+                                could be so satisfying and therapeutic... 
+                            </p>
+                            <Card 
+                            href="https://github.com/noelani-rose/noelani-weekend-redux-feedback-loop"
+                            title="Github"/>  
+                            <Card 
+                            href="https://github.com/noelani-rose/noelani-weekend-redux-feedback-loop"
+                            title="Read Full Post"/>              
+                    </div>
+
+                    <div class="project-pic">
+                        <img src = {screenshot1} class = "screenshot1"/>
+                        <img src = {screenshot2} class = "screenshot2"/>
+                    </div>
+                </div>
+            <br/>
+ 
+
+	</div>
+		<img src = {background} class = "background-pic"/>
+        
+
 	</main>
-
+	
 </Layout>
 
 <style>
-    .blog-container {
+
+	.content {
+	display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    position: absolute;
+    z-index: 1;
+    background-color: rgba(244, 243, 243, 0.949);
+    align-items: center;
+    border-radius: 1px solid black;
+    width: 80%;
+    height: 80%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    text-align: center;
+    padding: 20px;
+	}
+
+    .content a {
+        text-align: left;
+        font-size: 22px;
+        font-weight: bolder;
+		text-decoration: none;
+		line-height: 1;
+		padding: 1rem 1.3rem;
+		border-radius: 0.35rem;
+		opacity: 0.8;
+		background-size: 400%;
+        background-position: 0;
+		background-position: 100%;
+    }
+
+
+
+    .project-1, .project-3{
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        align-content: center;
+        gap: 50px;
     }
 
-    .blog-post-1 p{
-        margin:30px
-    }
-    .blog-post-1{
-        width: 320px;
-        border-radius: 8px;
-        background-color: rgb(213, 213, 213);
+    .project-2 {
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 50px;
+        margin-bottom: 60px;
     }
 
-    .blog-post-2 p {
-        margin:30px
+    .project-1-description {
+        width: 480px;
+    }
+   .project-2-description {
+        width: 480px;
+
     }
 
-    .blog-post-2{
-        width: 320px;
-        border-radius: 8px;
-        background-color: rgb(213, 213, 213);
+    .project-3-description {
+        width: 480px;
     }
 
-    #blog-title {
-        text-align: center;
+	h2 {
+        margin-bottom: 40px
+	}
+
+    .kd-training{
+        /* position: absolute; */
+        z-index: 1;
+        height: 450px;
+        margin-bottom: 100px;
+        flex-basis: 40%;
     }
+
+    .screenshot1, .screenshot2 {
+        width: 280px;
+        height: 400px;
+    }
+
+    /* .movies-list{
+        width: 300px;
+    } */
+
+	.background-pic {
+		position: relative;
+		-webkit-background-size: cover;
+  		-moz-background-size: cover;
+  		-o-background-size: cover;
+  		background-size: cover;
+		height: 800px;
+		margin: 0;
+	}
 
 	main {
-
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		position: absolute;
+		z-index: 1;
 		margin: auto;
-		padding: 1.5rem;
-		
+		padding: 2.5rem;
 	}
-	h1 {
+
+	.name {
+		z-index: 1;
 		text-align: center;
+  		-webkit-text-stroke-width: 0.6px; 
+		letter-spacing: 0.3ch;
+ 		 -webkit-text-stroke-color: black;
 		font-size: 3rem;
 		font-weight: 800;
-		margin: 0;
+
 	}
 	.text-gradient {
 		background-image: var(--accent-gradient);
@@ -75,42 +221,6 @@ import background from "../images/background.jpeg"
 		background-size: 400%;
 		background-position: 0%;
 	}
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
-		padding: 1rem;
-		border-radius: 0.4rem;
-	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent));
-	}
-	/* .link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
-	} */
+
+
 </style>
-
-
-
-
-
-
-
-
-
-
-
-
-
