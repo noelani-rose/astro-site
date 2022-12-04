@@ -15,6 +15,8 @@ import piper from '../images/piper.jpg'
 	<main>
 
 		<div class="content">
+			<a href = "/"><span>&larr;</span> Homepage</a>
+
 			<!-- <img class = "profile-pic" src = {profile}/> -->
 			<h1 class = "name text-gradient">Noelani West</h1>
             <h2>A little about me...</h2>
@@ -43,32 +45,6 @@ import piper from '../images/piper.jpg'
                 You’ll most likely find me in the gym training when 
                 I’m not writing code.
             </p>
-            <!-- <div class="animal-container">
-                <img src = {belledog} class="belle"/>
-                <img src = {milton} class="milton"/>
-                <img src = {piper} class="piper"/>
-
-            </div> -->
-			<!-- <Card
-				class = " link-to"
-				href="/about/"
-				title="About Me"
-				body="Here's just a little about my life"
-			/>
-			<Card
-			class = " link-to"
-
-				href="/portfolio/"
-				title="Portfolio"
-				body="Check out some of my most recent projects!"
-			/>
-			<Card
-			class = " link-to"
-
-				href="/blog/"
-				title="Blog"
-				body="Some highs and lows of learning how to code"
-			/> -->
 		</div>
         <div class="animal-container">
             <img src = {belledog} class="belle"/>
@@ -85,18 +61,36 @@ import piper from '../images/piper.jpg'
 
 <style>
 
-	.content {
+.content {
 	display: flex;
     flex-direction: column;
     border-radius: 10px;
     position: absolute;
     z-index: 1;
-    background-color: rgb(251, 251, 251);
-    height: 790px;
-    width: 70%;
+    background-color: rgba(244, 243, 243, 0.949);
     align-items: center;
+    border-radius: 1px solid black;
+    width: 80%;
+    height: 80%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    text-align: center;
+    padding: 20px;
 	}
 
+    .content a {
+        text-align: left;
+        font-size: 22px;
+        font-weight: bolder;
+		text-decoration: none;
+		line-height: 1;
+		padding: 1rem 1.3rem;
+		border-radius: 0.35rem;
+		opacity: 0.8;
+		background-size: 400%;
+        background-position: 0;
+		background-position: 100%;
+    }
     p {
         text-align: center;
         margin: 30px 100px;
@@ -156,11 +150,7 @@ import piper from '../images/piper.jpg'
 		padding: 20px;
 	}
 
-    .animal-container {
-        position: absolute;
-        margin-top: 430px;
-       
-    }
+
     .belle {
         box-shadow: 5px 5px 5px solid black;
         border-radius: 8px;
