@@ -1,0 +1,120 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import background from '../images/background.jpg'
+import profile from '../images/profile.jpg'
+
+
+---
+
+
+<Layout title="Noelani's Portfolio">
+	<main>
+
+		<div class="content">
+			<img class = "profile-pic" src = {profile}/>
+			<h1 class = "name text-gradient">Noelani West</h1>
+			<h2>Full Stack Software Engineer</h2>
+
+		<div role="list" class="link-card-grid">
+	
+			<Card
+				class = " link-to"
+				href="/about/"
+				title="About Me"
+				body="Here's just a little about my life"
+			/>
+			<Card
+			class = " link-to"
+
+				href="/portfolio/"
+				title="Portfolio"
+				body="Check out some of my most recent projects!"
+			/>
+			<Card
+			class = " link-to"
+
+				href="/blog/"
+				title="Blog"
+				body="Some highs and lows of learning how to code"
+			/>
+		</div>
+	</div>
+		<img src = {background} class = "background-pic"/>
+
+	</main>
+	
+</Layout>
+
+<style>
+
+	.content {
+	display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    position: absolute;
+    z-index: 1;
+    background-color: rgba(244, 243, 243, 0.949);
+    height: 600px;
+    justify-content: flex-end;
+    align-items: center;
+	}
+
+	/* h2 {
+		margin-bottom: 300px;
+	} */
+	.profile-pic {
+		position: absolute;
+		border-radius: 360px;
+		height: 250px;
+		margin-bottom: 300px;
+	}
+
+	.background-pic {
+		position: relative;
+		-webkit-background-size: cover;
+  		-moz-background-size: cover;
+  		-o-background-size: cover;
+  		background-size: cover;
+		height: 800px;
+		margin: 0;
+	}
+	main {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		position: absolute;
+		z-index: 1;
+		margin: auto;
+		padding: 2.5rem;
+
+	}
+	.name {
+		z-index: 1;
+		text-align: center;
+		/* color: black;
+  		-webkit-text-fill-color: black; */
+  		-webkit-text-stroke-width: 0.6px; 
+		letter-spacing: 0.3ch;
+ 		 -webkit-text-stroke-color: black;
+		font-size: 3rem;
+		font-weight: 800;
+		margin-top: 150px;
+	}
+	.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+
+	.link-card-grid {
+		display: flex;
+		/* grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr)); */
+		gap: 1rem;
+		padding: 20px;
+	}
+
+</style>

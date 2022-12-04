@@ -1,0 +1,168 @@
+---
+import Layout from '../layouts/Layout.astro';
+import background from '../images/background.jpg'
+import kdtraining from '../images/kdtraining.jpg'
+import Card from '../components/Card.astro';
+
+
+
+---
+
+
+<Layout title="Noelani's Portfolio">
+	<main>
+
+		<div class="content">
+			<h1 class = "name text-gradient">Noelani West</h1>
+            <h2>Here are some of my recent projects!</h2>
+
+ 
+                <div class = "project-1">
+                    <div class="project-1-description">
+                        <h3>Knuckles down</h3><br/>
+                            <p>A mobile app that provides olympic weightlifters<br/> 
+                            with a variety of training programs based on their goals <br/> 
+                            and a means totrack their progress throughout the program.</p>
+                            
+                
+                        <a href = "https://github.com/noelani-rose/knuckles-down-solo-project">Checkout my github</a>
+                    </div>
+
+                    <div class="project-pic">
+                        <img src = {kdtraining} class = "kd-training"/>
+                    </div>
+                </div>
+
+                <div class="project-2">
+                    <div class="project-2-description">
+                        <h3>Movie List</h3><br/>
+                            <p>A mobile app that provides olympic weightlifters<br/> 
+                            with a variety of training programs based on their goals <br/> 
+                            and a means totrack their progress throughout the program.</p>
+                            
+                
+                        <a href = "https://github.com/noelani-rose/knuckles-down-solo-project">Checkout my github</a>
+                    </div>
+
+                    <div class="project-pic">
+                        <img src = {kdtraining} class = "kd-training"/>
+                    </div>
+                </div>
+
+
+                <div class="project-3">
+                    <div class="project-3-description">
+                        <h3>Reflection Form</h3><br/>
+                            <p>A mobile app that provides olympic weightlifters<br/> 
+                            with a variety of training programs based on their goals <br/> 
+                            and a means totrack their progress throughout the program.</p>
+                            
+                
+                        <a href = "https://github.com/noelani-rose/knuckles-down-solo-project">Checkout my github</a>
+                    </div>
+
+                    <div class="project-pic">
+                        <img src = {kdtraining} class = "kd-training"/>
+                    </div>
+                </div>
+
+
+                
+        
+            <br/>
+ 
+
+	</div>
+		<img src = {background} class = "background-pic"/>
+        
+
+	</main>
+	
+</Layout>
+
+<style>
+
+	.content {
+	display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    position: absolute;
+    z-index: 1;
+    background-color: rgb(251, 251, 251);
+    align-items: center;
+    border-radius: 1px solid black;
+    width: 80%;
+    height: 80%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    text-align: center;
+    padding: 20px;
+	}
+
+    .project-1, .project-3{
+        display: flex;
+    /* margin-right: 340px; */
+    gap: 50px;
+    /* flex-direction: column; */
+    /* align-items: flex-end; */
+    }
+
+    .project-2 {
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 50px;
+    }
+
+
+	h2 {
+        margin-bottom: 40px
+	}
+
+    .kd-training{
+        /* position: absolute; */
+        z-index: 1;
+        height: 450px;
+        margin-bottom: 100px;
+        flex-basis: 40%;
+    }
+	.background-pic {
+		position: relative;
+		-webkit-background-size: cover;
+  		-moz-background-size: cover;
+  		-o-background-size: cover;
+  		background-size: cover;
+		height: 800px;
+		margin: 0;
+	}
+
+	main {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		position: absolute;
+		z-index: 1;
+		margin: auto;
+		padding: 2.5rem;
+	}
+
+	.name {
+		z-index: 1;
+		text-align: center;
+  		-webkit-text-stroke-width: 0.6px; 
+		letter-spacing: 0.3ch;
+ 		 -webkit-text-stroke-color: black;
+		font-size: 3rem;
+		font-weight: 800;
+
+	}
+	.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+
+
+</style>

@@ -1,0 +1,184 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import background from '../images/background.jpg'
+
+import belledog from '../images/belledog.jpg'
+import milton from '../images/milton.jpg'
+import piper from '../images/piper.jpg'
+
+
+---
+
+
+<Layout title="Noelani's Portfolio">
+	<main>
+
+		<div class="content">
+			<!-- <img class = "profile-pic" src = {profile}/> -->
+			<h1 class = "name text-gradient">Noelani West</h1>
+            <h2>A little about me...</h2>
+			<!-- <h2>A Little About Me</h2> -->
+
+		<div class = 'about-me'>
+            
+            <p>I’m a Marine Corps veteran with a background in electronics 
+                and environmental sustainability and have recently made
+                a career change to Software Engineering, and I couldn’t be more 
+                excited about it! My military experience and education 
+                have strengthened my adaptability, versatility, 
+                problem-solving skills, and ability to work under stress. 
+                I’ve learned ways to overcome adversity and obstacles 
+                by working collaboratively with teams and staying eager to 
+                learn from others around me. I feel confident and ready to 
+                tackle any new challenge that comes my way!
+            </p>
+
+            <p>I’m passionate about sustainability and would love 
+                to one day use technology to help solve our climate 
+                crisis. I love world travel (particularly solo, 
+                I’ve been to 14 other countries by myself!), 
+                my two dogs and cat, and baking. But most of all, 
+                I love competing in olympic weightlifting! 
+                You’ll most likely find me in the gym training when 
+                I’m not writing code.
+            </p>
+            <!-- <div class="animal-container">
+                <img src = {belledog} class="belle"/>
+                <img src = {milton} class="milton"/>
+                <img src = {piper} class="piper"/>
+
+            </div> -->
+			<!-- <Card
+				class = " link-to"
+				href="/about/"
+				title="About Me"
+				body="Here's just a little about my life"
+			/>
+			<Card
+			class = " link-to"
+
+				href="/portfolio/"
+				title="Portfolio"
+				body="Check out some of my most recent projects!"
+			/>
+			<Card
+			class = " link-to"
+
+				href="/blog/"
+				title="Blog"
+				body="Some highs and lows of learning how to code"
+			/> -->
+		</div>
+        <div class="animal-container">
+            <img src = {belledog} class="belle"/>
+            <img src = {milton} class="milton"/>
+            <img src = {piper} class="piper"/>
+        </div>
+	</div>
+		<img src = {background} class = "background-pic"/>
+        
+
+	</main>
+	
+</Layout>
+
+<style>
+
+	.content {
+	display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    position: absolute;
+    z-index: 1;
+    background-color: rgb(251, 251, 251);
+    height: 790px;
+    width: 70%;
+    align-items: center;
+	}
+
+    p {
+        text-align: center;
+        margin: 30px 100px;
+        
+    }
+
+	h2 {
+        margin-bottom: 40px
+	}
+
+
+	.background-pic {
+		position: relative;
+		-webkit-background-size: cover;
+  		-moz-background-size: cover;
+  		-o-background-size: cover;
+  		background-size: cover;
+		height: 800px;
+		margin: 0;
+	}
+
+	main {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		position: absolute;
+		z-index: 1;
+		margin: auto;
+		padding: 2.5rem;
+	}
+
+	.name {
+		z-index: 1;
+		text-align: center;
+		/* color: black;
+  		-webkit-text-fill-color: black; */
+  		-webkit-text-stroke-width: 0.6px; 
+		letter-spacing: 0.3ch;
+ 		 -webkit-text-stroke-color: black;
+		font-size: 3rem;
+		font-weight: 800;
+		/* margin-bottom: 300px; */
+	}
+	.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+
+	.link-card-grid {
+		display: flex;
+		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		gap: 1rem;
+		padding: 20px;
+	}
+
+    .animal-container {
+        position: absolute;
+        margin-top: 430px;
+       
+    }
+    .belle {
+        box-shadow: 5px 5px 5px solid black;
+        border-radius: 8px;
+        z-index: 1;
+        height: 330px;
+        width:200px;
+    }
+    .milton {
+        border-radius: 8px;
+        z-index: 1;
+        height: 330px;
+        width:200px;
+    }
+    .piper {
+        border-radius: 8px;
+        z-index: 1;
+        height: 330px;
+        width:200px;
+    }
+
+</style>
